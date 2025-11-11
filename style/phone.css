@@ -1,0 +1,249 @@
+@media (max-width: 600px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .header {
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+    .header__name {
+        font-size: xx-large;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .calculator {
+    }
+
+    .calculator__form {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        border-top: 5px dotted mediumseagreen;
+        border-bottom: 5px dotted mediumseagreen;
+        margin: 5px;
+        padding: 25px;
+        font-size: large;
+        font-weight: lighter;
+    }
+
+    .calculator__input {
+        margin-bottom: 10px;
+        border: 3px solid mediumseagreen;
+        border-radius: 10px;
+        padding: 2px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        min-height: 30px;
+    }
+
+    .calculator__input_type_amount,
+    .calculator__input_type_deposits {
+        width: 140px;
+    }
+
+    .calculator__input_type_rate,
+    .calculator__input_type_years,
+    .calculator__input_type_months {
+        width: 50px;
+    }
+
+    .calculator__input_type_deposits {
+        margin-bottom: 10px;
+    }
+
+    .calculator__checkbox {
+        margin-bottom: 10px;
+    }
+
+    .error-message {
+        color: crimson;
+        font-size: 12px;
+        margin-top: -10px;
+        display: none;
+    }
+
+    .calculator__button-wrapper {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .calculator__button {
+        cursor: pointer;
+
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+
+        padding: 5px;
+        color: whitesmoke;
+        background-color: darkslategray;
+
+        font-size: large;
+        font-family: inherit;
+    }
+
+    @media (orientation: portrait) {
+        .calculator__button {
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .calculator__button:active {
+            background-color: mediumseagreen;
+            transform: scale(0.95);
+        }
+    }
+
+    #exportExcel {
+        margin-left: 15px;
+    }
+
+    .help {
+        color: cornflowerblue;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip {
+        position: absolute;
+        top: 120%;
+        left: 0;
+        background: rgba(47,79,79,0.95);
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.4;
+        white-space: normal;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+        z-index: 10;
+        min-width: 250px;
+        max-width: 90vw;
+        box-sizing: border-box;
+    }
+
+    .help:hover .tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .help.active .tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    .calculator__result-wrapper {
+        display: none;
+    }
+
+    .calculator__result-wrapper.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 5px;
+        max-width: 100%;
+    }
+
+    .calculator__result {
+        font-size: large;
+        font-weight: lighter;
+    }
+
+    .text-result {
+        margin: 10px 0;
+    }
+
+    .calculator__result br{
+        display: none;
+    }
+
+    .additionalInflation {
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    .final-sum {
+        border-top: 4px dotted mediumseagreen;;
+        font-size: 23px;
+    }
+
+    .donutChart-wrapper {
+        width: 100%;
+        max-width: 500px;
+        height: 230px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #donutChart {
+        height: 250%;
+        width: 100%;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    .chart {
+        position: relative;
+        margin: 40px auto;
+        width: 97%;
+        height: 300px;
+        background-color: white;
+        border-radius: 30px;
+        display: none;
+        max-width: 100%;
+    }
+
+    #profitChart{
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    .footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .footer__address {
+        font-size: large;
+    }
+
+    .footer__rights {
+        font-size: larger;
+    }
+
+    .footer__address a {
+        color: mediumseagreen;
+        transition: color 0.2s ease;
+    }
+
+    .footer__address a:hover {
+        color: cornflowerblue;
+    }
+}
